@@ -11,7 +11,7 @@ import re
 import sys
 import numpy as np
 import pandas as pd
-from sklearn.externals import joblib
+import joblib
 
 warnings.filterwarnings('ignore')
 parser = argparse.ArgumentParser(description='Please provide following arguments. Please make the suitable changes in the envfile provided in the folder.') 
