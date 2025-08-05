@@ -51,6 +51,8 @@ def prediction(inputfile,model,out):
     clf = joblib.load(file_name2)
     data_test = np.loadtxt(file_name, delimiter=',')
     X_test = data_test
+    if X_test.ndim == 1:
+        X_test = X_test.reshape(1, -1)
     y_p_score1=clf.predict_proba(X_test)
     y_p_s1=y_p_score1.tolist()
     df = pd.DataFrame(y_p_s1)
